@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "description": "Canonical Job 1-15 registry for the formal Phase 3 inference benchmark.",
+  "runs": [
+    {"job": 1, "backbone": "resnet50", "seed": 42, "run_id": "phase3_formal_resnet50_seed42_20260913_v1", "expected_target_ap": 0.0794, "eligible": true},
+    {"job": 2, "backbone": "efficientnet_b0", "seed": 42, "run_id": "phase3_formal_efficientnet_b0_seed42_20260913_v1", "expected_target_ap": 0.0790, "eligible": true},
+    {"job": 3, "backbone": "convnext_tiny", "seed": 42, "run_id": "phase3_formal_convnext_tiny_seed42_20260913_v1", "expected_target_ap": null, "eligible": false, "exclusion_reason": "numerical_failure"},
+    {"job": 4, "backbone": "swin_t", "seed": 42, "run_id": "phase3_formal_swin_t_seed42_20260913_v1", "expected_target_ap": 0.0924, "eligible": true},
+    {"job": 5, "backbone": "pvtv2_b1", "seed": 42, "run_id": "phase3_formal_pvtv2_b1_seed42_20260913_v1", "expected_target_ap": 0.0829, "eligible": true},
+    {"job": 6, "backbone": "efficientnet_b0", "seed": 123, "run_id": "phase3_formal_efficientnet_b0_seed123_20260915_v2", "expected_target_ap": 0.0750, "eligible": true},
+    {"job": 7, "backbone": "convnext_tiny", "seed": 123, "run_id": "phase3_formal_convnext_tiny_seed123_20260915_v2", "expected_target_ap": 0.0333, "eligible": true},
+    {"job": 8, "backbone": "swin_t", "seed": 123, "run_id": "phase3_formal_swin_t_seed123_20260915_v2", "expected_target_ap": 0.0656, "eligible": true},
+    {"job": 9, "backbone": "pvtv2_b1", "seed": 123, "run_id": "phase3_formal_pvtv2_b1_seed123_20260915_v2", "expected_target_ap": 0.0881, "eligible": true, "resume_note": "resumed_from_epoch_11"},
+    {"job": 10, "backbone": "resnet50", "seed": 123, "run_id": "phase3_formal_resnet50_seed123_20260915_v2", "expected_target_ap": 0.0559, "eligible": true},
+    {"job": 11, "backbone": "convnext_tiny", "seed": 2026, "run_id": "phase3_formal_convnext_tiny_seed2026_20260915_v2", "expected_target_ap": 0.0565, "eligible": true},
+    {"job": 12, "backbone": "swin_t", "seed": 2026, "run_id": "phase3_formal_swin_t_seed2026_20260915_v2", "expected_target_ap": 0.0546, "eligible": true},
+    {"job": 13, "backbone": "pvtv2_b1", "seed": 2026, "run_id": "phase3_formal_pvtv2_b1_seed2026_20260915_v2", "expected_target_ap": 0.0851, "eligible": true},
+    {"job": 14, "backbone": "resnet50", "seed": 2026, "run_id": "phase3_formal_resnet50_seed2026_20260915_v2", "expected_target_ap": 0.0828, "eligible": true},
+    {"job": 15, "backbone": "efficientnet_b0", "seed": 2026, "run_id": "phase3_formal_efficientnet_b0_seed2026_20260915_v2", "expected_target_ap": 0.0793, "eligible": true}
+  ]
+}

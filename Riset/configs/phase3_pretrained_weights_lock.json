@@ -1,0 +1,90 @@
+{
+    "schema_version":  1,
+    "status":  "verified_not_frozen",
+    "pretraining_policy":  {
+                               "scope":  "backbone_only",
+                               "dataset":  "ImageNet-1K",
+                               "fpn_initialized":  "random",
+                               "rpn_initialized":  "random",
+                               "roi_heads_initialized":  "random",
+                               "mask_head_initialized":  "random",
+                               "full_coco_detector_weights_allowed":  false
+                           },
+    "environment":  {
+                        "python":  "3.10.21",
+                        "torch":  "2.13.0+cu126",
+                        "torchvision":  "0.28.0+cu126",
+                        "timm":  "1.0.29"
+                    },
+    "candidates":  {
+                       "resnet50":  {
+                                        "family":  "cnn",
+                                        "status":  "primary",
+                                        "provider":  "torchvision",
+                                        "implementation_id":  "torchvision.models.resnet50",
+                                        "weights_id":  "ResNet50_Weights.IMAGENET1K_V2",
+                                        "pretraining_dataset":  "ImageNet-1K",
+                                        "pretrained_body_sha256":  "7412a3113342ea157019f5885b5739cd5316ed39f25208123fc4e8d7d284dfd3"
+                                    },
+                       "efficientnet_b0":  {
+                                               "family":  "cnn",
+                                               "status":  "primary",
+                                               "provider":  "timm",
+                                               "implementation_id":  "efficientnet_b0.ra_in1k",
+                                               "weights_id":  "timm/efficientnet_b0.ra_in1k",
+                                               "pretraining_dataset":  "ImageNet-1K",
+                                               "pretrained_body_sha256":  "fd3edc67ee0aed753d14e38dfa85481fa5fd21d05fc0a535fb86ae033f13d11e"
+                                           },
+                       "convnext_tiny":  {
+                                             "family":  "cnn",
+                                             "status":  "screening_required",
+                                             "provider":  "timm",
+                                             "implementation_id":  "convnext_tiny.fb_in1k",
+                                             "weights_id":  "timm/convnext_tiny.fb_in1k",
+                                             "pretraining_dataset":  "ImageNet-1K",
+                                             "pretrained_body_sha256":  "44a459116957faf9c0395353b451a9c1ba583150075010f1a75e89da0fe9e07f"
+                                         },
+                       "swin_t":  {
+                                      "family":  "transformer",
+                                      "status":  "primary",
+                                      "provider":  "timm",
+                                      "implementation_id":  "swin_tiny_patch4_window7_224.ms_in1k",
+                                      "weights_id":  "timm/swin_tiny_patch4_window7_224.ms_in1k",
+                                      "pretraining_dataset":  "ImageNet-1K",
+                                      "pretrained_body_sha256":  "820e1f3a08119bfb20e93fbc05bc4b70a672bb3a39f1d07e021ccc61cc0b0739"
+                                  },
+                       "pvtv2_b1":  {
+                                        "family":  "transformer",
+                                        "status":  "primary",
+                                        "provider":  "timm",
+                                        "implementation_id":  "pvt_v2_b1.in1k",
+                                        "weights_id":  "timm/pvt_v2_b1.in1k",
+                                        "original_repository":  "https://github.com/whai362/PVT",
+                                        "pretraining_dataset":  "ImageNet-1K",
+                                        "pretrained_body_sha256":  "9058ee77d89190fcc2f7243700fd01611f733964e8afe3f39834b64b3317ad9f"
+                                    },
+                       "swin_v2_t":  {
+                                         "family":  "transformer",
+                                         "status":  "reserve",
+                                         "provider":  "timm",
+                                         "implementation_id":  "swinv2_tiny_window8_256.ms_in1k",
+                                         "weights_id":  "timm/swinv2_tiny_window8_256.ms_in1k",
+                                         "pretraining_dataset":  "ImageNet-1K",
+                                         "pretrained_body_sha256":  "815307ee5845c3c2d056343df4780aa9cf37c4d586f1f18936f2a6c4fa4e4c2c"
+                                     }
+                   },
+    "freeze":  {
+                   "frozen_at_utc":  null,
+                   "git_commit":  null,
+                   "protocol_sha256":  null,
+                   "manifest_sha256":  null,
+                   "reviewer":  null
+               },
+    "verification":  {
+                         "verified_at_utc":  "2026-09-10T19:52:53.698556+00:00",
+                         "audit_artifact":  "Riset/output/research_phase3/pretrained_weight_audit.json",
+                         "audit_sha256":  "7a4f79391684a371700a33c3b0317bacbccdfcd0a4fc789a7d95461f9e4cecdd",
+                         "passed":  6,
+                         "failed":  0
+                     }
+}

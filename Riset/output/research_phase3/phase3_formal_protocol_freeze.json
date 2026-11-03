@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "status": "frozen",
+  "scope": "phase3_formal_backbone_selection_protocol",
+  "frozen_at_utc": "2026-09-11T16:35:48.169614+00:00",
+  "reviewer": "Didik Kurniawan",
+  "source_git_commit": "3f19b2f2377ac2baf513774de053d90f92e19dae",
+  "git_worktree_clean": true,
+  "rules": {
+    "formal_decision": {
+      "selection_scope": "one_winner_per_family",
+      "families": {
+        "cnn": [
+          "resnet50",
+          "efficientnet_b0",
+          "convnext_tiny"
+        ],
+        "transformer": [
+          "swin_t",
+          "pvtv2_b1"
+        ]
+      },
+      "reserve_candidates": [
+        "swin_v2_t"
+      ],
+      "primary_metric": "AP_trash_plastic",
+      "aggregation": {
+        "unit": "independent_training_seed",
+        "paired_by_seed": true,
+        "formal_seed_count": 3,
+        "statistics": [
+          "per_seed",
+          "mean",
+          "sample_standard_deviation",
+          "minimum",
+          "maximum",
+          "paired_seed_wins"
+        ],
+        "inferential_claims_permitted": false
+      },
+      "ap_equivalence_tolerance": 0.01,
+      "critical_false_negative": {
+        "category": "trash_plastic",
+        "category_id": 14,
+        "score_threshold": 0.05,
+        "iou_threshold": 0.5,
+        "area_scope": [
+          "medium",
+          "large"
+        ],
+        "metric": "critical_false_negative_rate",
+        "area_definition": "COCO_area_ranges_at_evaluation_scale"
+      },
+      "pareto": {
+        "separate_by_family": true,
+        "maximize": [
+          "mean_AP_trash_plastic"
+        ],
+        "minimize": [
+          "peak_reserved_vram_mb",
+          "median_end_to_end_latency_ms"
+        ]
+      },
+      "tie_break_order": [
+        "mean_AP_trash_plastic",
+        "lower_AP_sample_standard_deviation",
+        "lower_critical_false_negative_rate",
+        "higher_AP75_trash_plastic",
+        "lower_peak_reserved_vram_mb",
+        "lower_median_end_to_end_latency_ms",
+        "lower_parameter_count",
+        "simpler_implementation"
+      ],
+      "composite_score_allowed": false,
+      "pilot_accuracy_ranking_allowed": false,
+      "reserve_activation_rule": "Swin-V2-T may replace a Transformer candidate only after a predefined implementation or reproducibility failure, before formal result comparison, with reason and reviewer recorded.",
+      "eligible_set": "pareto_frontier_per_family"
+    },
+    "benchmark_protocol": {
+      "version": 1,
+      "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+      "power_condition": "AC_connected_high_performance",
+      "input_height": 320,
+      "input_width": 576,
+      "precision": "amp_fp16",
+      "allow_tf32": false,
+      "inference": {
+        "scenario": "single_stream_batch_1",
+        "split": "val_internal",
+        "sample_scope": "one_complete_split_pass_per_repetition",
+        "batch_size": 1,
+        "warmup_iterations": 50,
+        "repetitions": 3,
+        "model_order": "counterbalanced",
+        "cuda_synchronize": true,
+        "latency_scopes": [
+          "model_only_cuda_event",
+          "end_to_end_wall_clock_without_file_io"
+        ],
+        "statistics": [
+          "mean",
+          "median",
+          "sample_standard_deviation",
+          "p90",
+          "p95",
+          "p99",
+          "throughput_fps"
+        ],
+        "ap_score_threshold": 0.0,
+        "operational_score_threshold": 0.05,
+        "max_detections_per_image": 100,
+        "quality_gate_required": true,
+        "sample_order": "fixed_manifest_order",
+        "file_io_in_timed_region": false,
+        "model_only_clock": "torch_cuda_event",
+        "end_to_end_clock": "time_perf_counter"
+      },
+      "training": {
+        "batch_size": 2,
+        "gradient_accumulation_steps": 2,
+        "measure_epoch_duration": true,
+        "measure_total_duration": true,
+        "measure_peak_allocated_vram": true,
+        "measure_peak_reserved_vram": true
+      },
+      "environmental_controls": {
+        "close_nonessential_gpu_processes": true,
+        "record_temperature_and_power": true,
+        "record_start_and_end_timestamps_utc": true,
+        "same_software_environment": true
+      },
+      "required_metadata": [
+        "run_id",
+        "backbone",
+        "checkpoint_sha256",
+        "manifest_sha256",
+        "protocol_sha256",
+        "source_git_commit",
+        "git_worktree_clean",
+        "python_version",
+        "pytorch_version",
+        "torchvision_version",
+        "cuda_runtime_version",
+        "cudnn_version",
+        "gpu_name",
+        "gpu_driver_version",
+        "power_condition",
+        "input_shape",
+        "precision",
+        "batch_size",
+        "warmup_iterations",
+        "measured_image_count",
+        "repetition",
+        "model_order",
+        "started_at_utc",
+        "finished_at_utc"
+      ]
+    },
+    "run_validity": {
+      "required": [
+        "registered_backbone_and_pretrained_weights",
+        "registered_formal_seed",
+        "complete_epoch_budget",
+        "finite_loss_and_metrics",
+        "required_artifacts_present",
+        "matching_manifest_and_protocol_hashes",
+        "clean_source_commit",
+        "official_test_untouched"
+      ],
+      "failure_categories": [
+        "infrastructure_failure",
+        "implementation_failure",
+        "resource_infeasible",
+        "numerical_failure",
+        "protocol_violation"
+      ],
+      "rerun_policy": "Only infrastructure failures may be rerun unchanged. Other failures remain recorded and require a protocol amendment before any changed rerun.",
+      "exclude_failed_runs_from_mean": true,
+      "report_all_failures": true,
+      "require_clean_git_worktree": true
+    }
+  },
+  "inputs": {
+    "protocol": {
+      "path": "Riset/configs/phase3_training_protocol.json",
+      "sha256": "844a7eaa380b01e8f6f2b8b02fd4036d87cc0441e0f2bee07d9b8074879634f1"
+    },
+    "backbone_registry": {
+      "path": "models/backbone_registry.py",
+      "sha256": "64a0c97c520586f31ce786d5d5e14891744f17b224d59dc6182f2ae32f76ccd8"
+    },
+    "backbone_contract_audit": {
+      "path": "Riset/output/research_phase3/backbone_contract_audit.json",
+      "sha256": "e669df130354d68e7bba880b1da11e1b297ea40a53e7bf37f1654b4ac7b56d65"
+    },
+    "pretrained_weight_audit": {
+      "path": "Riset/output/research_phase3/pretrained_weight_audit.json",
+      "sha256": "7a4f79391684a371700a33c3b0317bacbccdfcd0a4fc789a7d95461f9e4cecdd"
+    },
+    "activation_freeze": {
+      "path": "Riset/output/research_phase3/backbone_activation_freeze.json",
+      "sha256": "6152c0164d529bd0fe4bb85c9019ae23763d66880725738c3678cc726e732e83"
+    },
+    "selection_protocol_document": {
+      "path": "PHASE3_BACKBONE_SELECTION_PROTOCOL.md",
+      "sha256": "02381e8d2c99637aadc0ef5f565b42ba4d38d07a93ebbccd60b369af6c22ad23"
+    }
+  },
+  "activation_freeze_sha256": "6152c0164d529bd0fe4bb85c9019ae23763d66880725738c3678cc726e732e83",
+  "activation_freeze_record_sha256": null,
+  "official_test_access": false,
+  "amendment_policy": "Any post-freeze change requires a new versioned protocol, explicit rationale, reviewer, source commit, and SHA-256 record before affected formal runs."
+}

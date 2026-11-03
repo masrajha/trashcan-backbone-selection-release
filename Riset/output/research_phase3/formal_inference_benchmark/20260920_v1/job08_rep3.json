@@ -1,0 +1,81 @@
+{
+  "status": "completed",
+  "job": 8,
+  "run_id": "phase3_formal_swin_t_seed123_20260915_v2",
+  "backbone": "swin_t",
+  "seed": 123,
+  "checkpoint": "Riset\\output\\runs\\phase3_formal_swin_t_seed123_20260915_v2\\checkpoints\\best_model.pth",
+  "checkpoint_sha256": "1b1d52e10a5c4bb89669e652e18d8ccb6b03a9ec24485612e133f644f7ca2b69",
+  "manifest_sha256": "eb4dae55b2c4afb4a2167448ad81b5cd8fed7bc7399ae57a36b27851300c2914",
+  "protocol_sha256": "844a7eaa380b01e8f6f2b8b02fd4036d87cc0441e0f2bee07d9b8074879634f1",
+  "source_git_commit": "199e19084956a8630e1fa18dfd2b740ff586e54d",
+  "git_worktree_clean_at_training": true,
+  "benchmark_git": {
+    "source_git_commit": "3a33d9b7a92ec1f0d1bda5ce62b9d46f1435cae9",
+    "git_worktree_clean": false
+  },
+  "environment": {
+    "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+    "gpu_index": 0,
+    "gpu_total_memory_bytes": 6441926656,
+    "compute_capability": "8.6",
+    "gpu_driver_version": "566.07",
+    "python_version": "3.10.21",
+    "pytorch_version": "2.13.0+cu126",
+    "torchvision_version": "0.28.0+cu126",
+    "cuda_runtime_version": "12.6",
+    "cudnn_version": 91002
+  },
+  "power_condition": "AC_connected_high_performance",
+  "input_shape": [
+    1,
+    3,
+    320,
+    576
+  ],
+  "precision": "amp_fp16",
+  "batch_size": 1,
+  "warmup_iterations": 50,
+  "measured_image_count": 1211,
+  "repetition": 3,
+  "model_order": 5,
+  "started_at_utc": "2026-09-20T21:14:06.877195+00:00",
+  "finished_at_utc": "2026-09-20T21:20:36.498823+00:00",
+  "provenance_checks": {
+    "backbone": true,
+    "seed": true,
+    "protocol_sha256": true,
+    "manifest_sha256": true,
+    "formal_stage": true
+  },
+  "quality_gate": {
+    "required": true,
+    "passed": true,
+    "basis": "passed_on_repetition_1"
+  },
+  "quality_metrics": null,
+  "model_only": {
+    "count": 1211,
+    "mean_ms": 167.02543958920668,
+    "median_ms": 159.14633178710938,
+    "sample_standard_deviation_ms": 39.876635733390835,
+    "p90_ms": 221.25267028808594,
+    "p95_ms": 239.801025390625,
+    "p99_ms": 293.6745788574219,
+    "throughput_fps": 5.987111918157291
+  },
+  "end_to_end": {
+    "count": 1211,
+    "mean_ms": 153.90543567316075,
+    "median_ms": 145.9877000306733,
+    "sample_standard_deviation_ms": 39.26953018433846,
+    "p90_ms": 204.60420002928004,
+    "p95_ms": 230.38185000768863,
+    "p99_ms": 278.14999000984255,
+    "throughput_fps": 6.497496307561462
+  },
+  "memory": {
+    "peak_allocated_vram_mb": 324.80419921875,
+    "peak_reserved_vram_mb": 428.0
+  }
+}

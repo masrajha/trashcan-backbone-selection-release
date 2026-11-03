@@ -1,0 +1,10 @@
+.venv/
+.trashcan-env/
+__pycache__/
+*.py[cod]
+material_version/*
+!material_version/README.md
+Riset/output/runs/*/checkpoints/
+*.pth
+.env
+kaggle.json

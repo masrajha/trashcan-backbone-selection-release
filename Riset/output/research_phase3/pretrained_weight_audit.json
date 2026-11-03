@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-09-10T19:52:53.698556+00:00",
+  "pretrained": true,
+  "input_size": [
+    320,
+    576
+  ],
+  "environment": {
+    "python": "3.10.21",
+    "torch": "2.13.0+cu126",
+    "torchvision": "0.28.0+cu126"
+  },
+  "results": [
+    {
+      "name": "resnet50",
+      "spec": {
+        "name": "resnet50",
+        "family": "cnn",
+        "role": "baseline_control",
+        "provider": "torchvision",
+        "implementation_id": "torchvision.models.resnet50",
+        "weights_id": "ResNet50_Weights.IMAGENET1K_V2",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "primary"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 26799296,
+      "pretrained_body_sha256": "7412a3113342ea157019f5885b5739cd5316ed39f25208123fc4e8d7d284dfd3"
+    },
+    {
+      "name": "efficientnet_b0",
+      "spec": {
+        "name": "efficientnet_b0",
+        "family": "cnn",
+        "role": "efficient_candidate",
+        "provider": "timm",
+        "implementation_id": "efficientnet_b0.ra_in1k",
+        "weights_id": "timm/efficientnet_b0.ra_in1k",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "primary"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 6083708,
+      "pretrained_body_sha256": "fd3edc67ee0aed753d14e38dfa85481fa5fd21d05fc0a535fb86ae033f13d11e"
+    },
+    {
+      "name": "convnext_tiny",
+      "spec": {
+        "name": "convnext_tiny",
+        "family": "cnn",
+        "role": "modern_cnn_candidate",
+        "provider": "timm",
+        "implementation_id": "convnext_tiny.fb_in1k",
+        "weights_id": "timm/convnext_tiny.fb_in1k",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "screening_required"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 30548576,
+      "pretrained_body_sha256": "44a459116957faf9c0395353b451a9c1ba583150075010f1a75e89da0fe9e07f"
+    },
+    {
+      "name": "swin_t",
+      "spec": {
+        "name": "swin_t",
+        "family": "transformer",
+        "role": "window_transformer_candidate",
+        "provider": "timm",
+        "implementation_id": "swin_tiny_patch4_window7_224.ms_in1k",
+        "weights_id": "timm/swin_tiny_patch4_window7_224.ms_in1k",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "primary"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 30247802,
+      "pretrained_body_sha256": "820e1f3a08119bfb20e93fbc05bc4b70a672bb3a39f1d07e021ccc61cc0b0739"
+    },
+    {
+      "name": "pvtv2_b1",
+      "spec": {
+        "name": "pvtv2_b1",
+        "family": "transformer",
+        "role": "dense_pyramid_transformer_candidate",
+        "provider": "timm",
+        "implementation_id": "pvt_v2_b1.in1k",
+        "weights_id": "timm/pvt_v2_b1.in1k",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "primary"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 16119488,
+      "pretrained_body_sha256": "9058ee77d89190fcc2f7243700fd01611f733964e8afe3f39834b64b3317ad9f"
+    },
+    {
+      "name": "swin_v2_t",
+      "spec": {
+        "name": "swin_v2_t",
+        "family": "transformer",
+        "role": "reserve_window_transformer",
+        "provider": "timm",
+        "implementation_id": "swinv2_tiny_window8_256.ms_in1k",
+        "weights_id": "timm/swinv2_tiny_window8_256.ms_in1k",
+        "pretraining_dataset": "ImageNet-1K",
+        "status": "reserve"
+      },
+      "pretrained_loaded": true,
+      "status": "passed",
+      "feature_shapes": {
+        "0": [
+          1,
+          256,
+          80,
+          144
+        ],
+        "1": [
+          1,
+          256,
+          40,
+          72
+        ],
+        "2": [
+          1,
+          256,
+          20,
+          36
+        ],
+        "3": [
+          1,
+          256,
+          10,
+          18
+        ],
+        "pool": [
+          1,
+          256,
+          5,
+          9
+        ]
+      },
+      "parameter_count": 30306602,
+      "pretrained_body_sha256": "815307ee5845c3c2d056343df4780aa9cf37c4d586f1f18936f2a6c4fa4e4c2c"
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

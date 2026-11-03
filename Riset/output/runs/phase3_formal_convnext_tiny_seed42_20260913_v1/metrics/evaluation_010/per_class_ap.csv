@@ -1,0 +1,17 @@
+category_id,class_name,AP,AP50,AP75,AR100,num_gt
+1,rov,0.0,0.0,0.0,0.0,549
+2,plant,0.0,0.0,0.0,0.0,66
+3,animal_fish,0.0,0.0,0.0,0.0,113
+4,animal_starfish,0.0,0.0,0.0,0.0,98
+5,animal_shells,0.0,0.0,0.0,0.0,33
+6,animal_crab,0.0,0.0,0.0,0.0,54
+7,animal_eel,0.0,0.0,0.0,0.0,57
+8,animal_etc,0.0,0.0,0.0,0.0,45
+9,trash_etc,0.0,0.0,0.0,0.0,395
+10,trash_fabric,0.0,0.0,0.0,0.0,69
+11,trash_fishing_gear,0.0,0.0,0.0,0.0,25
+12,trash_metal,0.0,0.0,0.0,0.0,175
+13,trash_paper,0.0,0.0,0.0,0.0,20
+14,trash_plastic,0.0,0.0,0.0,0.0,312
+15,trash_rubber,0.0,0.0,0.0,0.0,19
+16,trash_wood,0.0,0.0,0.0,0.0,47

@@ -1,0 +1,70 @@
+﻿{
+    "schema_version":  1,
+    "status":  "frozen",
+    "decision_scope":  "phase3_backbone_activation_after_pilot",
+    "frozen_at_utc":  "2026-09-11T10:55:05.7899446Z",
+    "reviewer":  "Didik Kurniawan",
+    "pilot_tag":  "20260912_v2",
+    "official_test_accessed":  false,
+    "primary_candidates":  [
+                               "resnet50",
+                               "efficientnet_b0",
+                               "convnext_tiny",
+                               "swin_t",
+                               "pvtv2_b1"
+                           ],
+    "reserve_candidates":  [
+                               "swin_v2_t"
+                           ],
+    "formal_seeds":  [
+                         42,
+                         123,
+                         2026
+                     ],
+    "formal_run_count":  15,
+    "protocol_sha256":  "c675830fe00c38dd7e38c68de9fe46f094827f08a613203003d153118fdf431a",
+    "manifest_sha256":  "eb4dae55b2c4afb4a2167448ad81b5cd8fed7bc7399ae57a36b27851300c2914",
+    "pilot_summary_path":  "D:\\Backup LOQ\\Riset\\Trashcan-Dataset\\Riset\\output\\research_phase3\\phase3_pilot_final_summary_20260912_v2.json",
+    "pilot_summary_sha256":  "d9bb7987ca85b441d2187af885a7055f8a9726672df8bf473d4ea37298d10a04",
+    "source_git_commit":  "6be92177487c68708661143bc5992bebdded0a14",
+    "pilot_runs_were_dirty":  true,
+    "accuracy_ranking_permitted_from_pilot":  false,
+    "decisions":  {
+                      "resnet50":  {
+                                       "decision":  "activated_primary",
+                                       "technical_feasibility":  "passed",
+                                       "reason":  "Pre-registered primary candidate passed smoke and pilot feasibility.",
+                                       "run_id":  "phase3_pilot_resnet50_seed42_20260912_v2"
+                                   },
+                      "efficientnet_b0":  {
+                                              "decision":  "activated_primary",
+                                              "technical_feasibility":  "passed",
+                                              "reason":  "Pre-registered primary candidate passed smoke and pilot feasibility.",
+                                              "run_id":  "phase3_pilot_efficientnet_b0_seed42_20260912_v2"
+                                          },
+                      "convnext_tiny":  {
+                                            "decision":  "activated_primary",
+                                            "technical_feasibility":  "passed",
+                                            "reason":  "Conditional CNN candidate passed smoke and pilot feasibility.",
+                                            "run_id":  "phase3_pilot_convnext_tiny_seed42_20260912_v2"
+                                        },
+                      "swin_t":  {
+                                     "decision":  "activated_primary",
+                                     "technical_feasibility":  "passed",
+                                     "reason":  "Pre-registered primary candidate passed smoke and pilot feasibility.",
+                                     "run_id":  "phase3_pilot_swin_t_seed42_20260912_v2"
+                                 },
+                      "pvtv2_b1":  {
+                                       "decision":  "activated_primary",
+                                       "technical_feasibility":  "passed",
+                                       "reason":  "Pre-registered primary candidate passed smoke and pilot feasibility.",
+                                       "run_id":  "phase3_pilot_pvtv2_b1_seed42_20260912_v2"
+                                   },
+                      "swin_v2_t":  {
+                                        "decision":  "reserve",
+                                        "technical_feasibility":  "passed",
+                                        "reason":  "Pre-registered reserve; technically feasible, with the highest pilot cost and convergence risk.",
+                                        "run_id":  "phase3_pilot_swin_v2_t_seed42_20260912_v2"
+                                    }
+                  }
+}

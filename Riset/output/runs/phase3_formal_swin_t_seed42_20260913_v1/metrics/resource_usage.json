@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "device": "cuda",
+  "gpu_name": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "cuda_metrics_available": true,
+  "num_epochs": 30,
+  "total_duration_seconds": 29000.905081300007,
+  "mean_epoch_duration_seconds": 966.5658280866677,
+  "max_epoch_peak_allocated_mb": 1714.23388671875,
+  "max_epoch_peak_reserved_mb": 2380.0,
+  "epochs": [
+    {
+      "epoch": 1,
+      "duration_seconds": 1964.4289165000082,
+      "peak_allocated_mb": 1592.68994140625,
+      "peak_reserved_mb": 1830.0,
+      "train_loss": 0.8596770093590022
+    },
+    {
+      "epoch": 2,
+      "duration_seconds": 661.5519779000024,
+      "peak_allocated_mb": 1619.751953125,
+      "peak_reserved_mb": 1946.0,
+      "train_loss": 0.6198174083977938
+    },
+    {
+      "epoch": 3,
+      "duration_seconds": 1329.9759668000042,
+      "peak_allocated_mb": 1587.72119140625,
+      "peak_reserved_mb": 2072.0,
+      "train_loss": 0.5556642463244498
+    },
+    {
+      "epoch": 4,
+      "duration_seconds": 875.0325617000053,
+      "peak_allocated_mb": 1628.9736328125,
+      "peak_reserved_mb": 2066.0,
+      "train_loss": 0.513737095799297
+    },
+    {
+      "epoch": 5,
+      "duration_seconds": 885.6862618000014,
+      "peak_allocated_mb": 1636.72412109375,
+      "peak_reserved_mb": 2042.0,
+      "train_loss": 0.47958898614471157
+    },
+    {
+      "epoch": 6,
+      "duration_seconds": 1202.5957716999983,
+      "peak_allocated_mb": 1626.0478515625,
+      "peak_reserved_mb": 2012.0,
+      "train_loss": 0.45383579066644114
+    },
+    {
+      "epoch": 7,
+      "duration_seconds": 679.225893099996,
+      "peak_allocated_mb": 1650.43603515625,
+      "peak_reserved_mb": 2092.0,
+      "train_loss": 0.43541831719999513
+    },
+    {
+      "epoch": 8,
+      "duration_seconds": 689.0754554000159,
+      "peak_allocated_mb": 1640.9765625,
+      "peak_reserved_mb": 2322.0,
+      "train_loss": 0.41484261229634284
+    },
+    {
+      "epoch": 9,
+      "duration_seconds": 919.3204546999768,
+      "peak_allocated_mb": 1614.6796875,
+      "peak_reserved_mb": 2050.0,
+      "train_loss": 0.39798184115439655
+    },
+    {
+      "epoch": 10,
+      "duration_seconds": 672.8244317000208,
+      "peak_allocated_mb": 1644.31494140625,
+      "peak_reserved_mb": 2236.0,
+      "train_loss": 0.38675734828536706
+    },
+    {
+      "epoch": 11,
+      "duration_seconds": 681.1324625000125,
+      "peak_allocated_mb": 1624.01220703125,
+      "peak_reserved_mb": 2104.0,
+      "train_loss": 0.35926244340837
+    },
+    {
+      "epoch": 12,
+      "duration_seconds": 1170.4757161999878,
+      "peak_allocated_mb": 1637.45263671875,
+      "peak_reserved_mb": 2134.0,
+      "train_loss": 0.3530733884125948
+    },
+    {
+      "epoch": 13,
+      "duration_seconds": 880.3758550999919,
+      "peak_allocated_mb": 1656.03564453125,
+      "peak_reserved_mb": 2170.0,
+      "train_loss": 0.3503946354209135
+    },
+    {
+      "epoch": 14,
+      "duration_seconds": 876.2123833000078,
+      "peak_allocated_mb": 1672.30615234375,
+      "peak_reserved_mb": 2380.0,
+      "train_loss": 0.3476806428780158
+    },
+    {
+      "epoch": 15,
+      "duration_seconds": 1184.7321595000103,
+      "peak_allocated_mb": 1613.0615234375,
+      "peak_reserved_mb": 2160.0,
+      "train_loss": 0.34542014464425547
+    },
+    {
+      "epoch": 16,
+      "duration_seconds": 862.6335809000011,
+      "peak_allocated_mb": 1631.4833984375,
+      "peak_reserved_mb": 2230.0,
+      "train_loss": 0.3439867849337558
+    },
+    {
+      "epoch": 17,
+      "duration_seconds": 866.3446534000104,
+      "peak_allocated_mb": 1638.37548828125,
+      "peak_reserved_mb": 2142.0,
+      "train_loss": 0.34284414526696005
+    },
+    {
+      "epoch": 18,
+      "duration_seconds": 1145.5023577999964,
+      "peak_allocated_mb": 1657.43896484375,
+      "peak_reserved_mb": 2156.0,
+      "train_loss": 0.34107423152774574
+    },
+    {
+      "epoch": 19,
+      "duration_seconds": 854.5034845999908,
+      "peak_allocated_mb": 1627.888671875,
+      "peak_reserved_mb": 2048.0,
+      "train_loss": 0.3400585623613248
+    },
+    {
+      "epoch": 20,
+      "duration_seconds": 893.0120357999986,
+      "peak_allocated_mb": 1620.27734375,
+      "peak_reserved_mb": 2154.0,
+      "train_loss": 0.3368778903502971
+    },
+    {
+      "epoch": 21,
+      "duration_seconds": 1146.0186762000085,
+      "peak_allocated_mb": 1672.5390625,
+      "peak_reserved_mb": 2100.0,
+      "train_loss": 0.3353535117208958
+    },
+    {
+      "epoch": 22,
+      "duration_seconds": 886.7224166999804,
+      "peak_allocated_mb": 1714.23388671875,
+      "peak_reserved_mb": 2100.0,
+      "train_loss": 0.3349795168141524
+    },
+    {
+      "epoch": 23,
+      "duration_seconds": 873.5700520999962,
+      "peak_allocated_mb": 1627.95166015625,
+      "peak_reserved_mb": 2328.0,
+      "train_loss": 0.3340414683862279
+    },
+    {
+      "epoch": 24,
+      "duration_seconds": 1139.2587822999922,
+      "peak_allocated_mb": 1617.35107421875,
+      "peak_reserved_mb": 2304.0,
+      "train_loss": 0.3349462143238634
+    },
+    {
+      "epoch": 25,
+      "duration_seconds": 890.1430237000168,
+      "peak_allocated_mb": 1661.7861328125,
+      "peak_reserved_mb": 2110.0,
+      "train_loss": 0.33412713970057667
+    },
+    {
+      "epoch": 26,
+      "duration_seconds": 858.2630186000024,
+      "peak_allocated_mb": 1658.32177734375,
+      "peak_reserved_mb": 2180.0,
+      "train_loss": 0.334559712500001
+    },
+    {
+      "epoch": 27,
+      "duration_seconds": 1118.7330534000066,
+      "peak_allocated_mb": 1641.68603515625,
+      "peak_reserved_mb": 2106.0,
+      "train_loss": 0.3345502732073267
+    },
+    {
+      "epoch": 28,
+      "duration_seconds": 860.7477648000058,
+      "peak_allocated_mb": 1640.6572265625,
+      "peak_reserved_mb": 2192.0,
+      "train_loss": 0.3334995225351304
+    },
+    {
+      "epoch": 29,
+      "duration_seconds": 841.4648063000059,
+      "peak_allocated_mb": 1668.18994140625,
+      "peak_reserved_mb": 2328.0,
+      "train_loss": 0.3337261421512812
+    },
+    {
+      "epoch": 30,
+      "duration_seconds": 1087.410868099978,
+      "peak_allocated_mb": 1700.19580078125,
+      "peak_reserved_mb": 2136.0,
+      "train_loss": 0.3330318745598197
+    }
+  ]
+}
