@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 TrashCAN Dataset Pipeline - Main Entry Point
-Author: AI Assistant
+Author: Didik K
+AI assistance: OpenAI Codex
 Version: 2.0
 Description: Complete pipeline for TrashCAN instance segmentation
 """
